@@ -14,7 +14,7 @@ import java.util.Date;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = ".",
-        tags = "@sanity",
+        tags = "@booking",
         format = {
                 "pretty", "html:target/cucumber-html-report",
                 "json:target/json/report_example.json"},

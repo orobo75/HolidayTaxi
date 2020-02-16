@@ -2,14 +2,15 @@ package com.Test.HolidayTaxis.stepDefinition;
 
 import com.Test.HolidayTaxis.DriverInstance;
 import com.Test.HolidayTaxis.pageObject.FAQsPO;
-import com.Test.HolidayTaxis.pageObject.Booking_LoginPO;
+import com.Test.HolidayTaxis.pageObject.LoginPO;
+import com.Test.HolidayTaxis.pageObject.SearchPO;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class FAQs_step extends DriverInstance {
     private FAQsPO faq = new FAQsPO(driver);
-    private Booking_LoginPO bl = new Booking_LoginPO(driver);
+    private LoginPO bl = new LoginPO(driver);
+    private SearchPO sea = new SearchPO(driver);
 
 
     @Given("^I log in to agent website$")
@@ -19,20 +20,18 @@ public class FAQs_step extends DriverInstance {
 
     @When("^I click cta FAQ$")
     public void iClickCtaFAQ()  {
-        faq.ctaFAQs();
-    }
-
-    @Then("^FAQs page should displayed$")
-    public void faqsPageShouldDisplayed()  {
-        System.out.println(driver.getTitle());
-    }
-
-
-    @Then("^FAQsfeature should displayed$")
-    public void faqsfeatureShouldDisplayed() {
-        System.out.println(driver.getTitle());
+        //faq.ctaFAQs();
+        sea.Search();
 
     }
+
+//    @Then("^FAQs page should displayed$")
+//    public void faqsPageShouldDisplayed()  {
+//        System.out.println(driver.getTitle());
+//    }
+
+
+
 
 
 }

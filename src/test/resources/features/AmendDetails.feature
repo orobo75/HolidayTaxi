@@ -1,2 +1,0 @@
-@sanity
-  Feature: ndsm.DK

@@ -6,5 +6,3 @@
       When I click cta FAQ
       Then FAQs page should displayed
 
-      When I click cta FAQsfeature
-      Then  FAQsfeature should displayed

@@ -7,19 +7,19 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Booking_LoginPO {
+public class LoginPO {
     private WebDriver driver;
 
     //To initialise Web element
-    public Booking_LoginPO(WebDriver driver){
+    public LoginPO(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
 
     }
 
     //Define element locator
-    @FindBy (xpath = "//*[@id=\'example-navbar-collapse\']/ul/li[3]/ul/li[5]")
-    private WebElement Agents;
+//    @FindBy (xpath = "//*[@id=\'example-navbar-collapse\']/ul/li[3]/ul/li[5]")
+//    private WebElement Agents;
 
     @FindBy (id = "username")
     private WebElement UsernameField;
@@ -27,7 +27,7 @@ public class Booking_LoginPO {
     @FindBy (id = "password")
     private WebElement PasswordField;
 
-    @FindBy (id = "submit")
+    @FindBy (xpath = "//button[text()='LOG IN']")
     private WebElement Login;
 
 
@@ -35,8 +35,8 @@ public class Booking_LoginPO {
     //Log In
     public void Login (){
         WebDriverWait wait = new WebDriverWait(driver, 20);
-        wait.until(ExpectedConditions.elementToBeClickable(Agents));
-        Agents.click();
+//        wait.until(ExpectedConditions.elementToBeClickable(Agents));
+//        Agents.click();
         wait.until(ExpectedConditions.elementToBeClickable(UsernameField));
         UsernameField.sendKeys("QAGGM");
         wait.until(ExpectedConditions.elementToBeClickable(PasswordField));

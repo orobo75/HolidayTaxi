@@ -32,7 +32,4 @@ public class FAQsPO<Question> {
 
 
 
-    public void ctaFAQsfeature () {
-
-    }
 }
